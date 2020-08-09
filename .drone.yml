@@ -2,10 +2,6 @@
 kind: pipeline
 name: default
 
-platform:
-  os: linux
-  arch: amd64
-
 steps:
   - name: build
     image: golang
@@ -17,4 +13,4 @@ steps:
     image: plugins/docker
     settings:
       repo: hello-app
-      dry_run: true
+      registry: localhost:5000

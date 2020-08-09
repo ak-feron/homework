@@ -12,4 +12,4 @@ steps:
   - name: docker
     image: plugins/docker
     settings:
-      repo: "app3:5000/hello-app"
+      repo: "178.63.61.82:5000/hello-app"

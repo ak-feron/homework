@@ -12,5 +12,4 @@ steps:
   - name: docker
     image: plugins/docker
     settings:
-      repo: hello-app
-      registry: "localhost:5000"
+      repo: "localhost:5000/hello-app"

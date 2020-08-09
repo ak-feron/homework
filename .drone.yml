@@ -13,3 +13,5 @@ steps:
     image: plugins/docker
     settings:
       repo: "178.63.61.82:5000/hello-app"
+      registry: 178.63.61.82:5000
+      insecure: true

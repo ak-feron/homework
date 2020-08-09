@@ -17,3 +17,4 @@ steps:
     image: plugins/docker
     settings:
       repo: hello-app
+      dry_run: true

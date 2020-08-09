@@ -12,3 +12,6 @@ steps:
     commands:
       - make build
       - make test
+
+  - name: docker
+    image: plugins/docker

@@ -1,19 +1,5 @@
-pipeline {
-    agent {
-        docker {
-            image 'golang'
-        }
-    }
-    stages {
-        stage('Build') {
-            steps {
-                sh 'make build'
-            }
-        }
-        stage('Test') {
-            steps {
-		sh 'make test'
-            }
-        }
-    }
+node {
+    checkout scm
+    //def customImage = docker.build("my-image:${env.BUILD_ID}")
+    //customImage.push()
 }

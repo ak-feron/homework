@@ -8,6 +8,10 @@ node {
             sh 'make test'
         }
     }
+
     customImage = docker.build("hello-app")
-    //customImage.push()
+
+    docker.withRegistry('http://178.63.61.82:5000') {
+        customImage.push()
+    }
 }

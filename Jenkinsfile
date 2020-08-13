@@ -1,5 +1,5 @@
 node {
-    docker.image('golang').inside {
+    def customImage = docker.image('golang').inside {
         stage('Build') {
             sh 'make build'
         }
@@ -8,6 +8,6 @@ node {
             sh 'make test'
         }
     }
-    //def customImage = docker.build("my-image:${env.BUILD_ID}")
+    customImage = docker.build("hello-app")
     //customImage.push()
 }
